@@ -6,7 +6,7 @@ import SocialIcons from "@/components/front/social-icons";
 import { useContactForm } from "@/hooks/use-contact-form";
 
 const ContactPage = () => {
-  const { data, setData, btnClass, enabled, form, sendEmail } = useContactForm();
+  const { data, setData, btnClass, form, sendEmail } = useContactForm();
 
   return (
     <section id="contact" className="w-full px-4 py-16 h-full">
@@ -113,13 +113,12 @@ const ContactPage = () => {
                     value={data.message}
                     onChange={(e) => setData({ ...data, message: e.target.value })}
                     required
-                    minLength={80}
+                    minLength={60}
                     id="message"
                     className="p-3 border-2 border-gray-300 rounded-lg"
                     rows={10}></textarea>
                 </div>
                 <button
-                  disabled={!enabled}
                   id="sendButton"
                   className={`w-full p-4 mt-4 text-gray-100 uppercase duration-300 shadow-xl shadow-gray-400 rounded-xl ${btnClass}`}>
                   Envoyer
