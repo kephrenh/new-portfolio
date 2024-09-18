@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <section className="w-full h-[80vh] flex justify-center items-center text-center">
+    <section className="w-full my-16 sm:my-0 h-[80vh] flex justify-center items-center text-center">
       <div
         id="accueil"
         className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
