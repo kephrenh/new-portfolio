@@ -5,7 +5,7 @@ import { kaunshan } from "@/lib/fonts";
 import Link from "next/link";
 import CustomLink from "../custom-link";
 import { Button } from "../ui/button";
-import { MenuIcon, X } from "lucide-react";
+import { MenuIcon } from "lucide-react";
 
 import { useDrawer } from "@/hooks/use-drawer";
 import MobileNavbar from "./mobile-navbar";

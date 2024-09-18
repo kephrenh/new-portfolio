@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 
-import { X, XIcon } from "lucide-react";
+import { X } from "lucide-react";
 import { navLinkData } from "@/lib/data/data";
 import SocialIcons from "./social-icons";
 import { kaunshan } from "@/lib/fonts";
