@@ -6,7 +6,7 @@ import SocialIcons from "@/components/front/social-icons";
 import { useContactForm } from "@/hooks/use-contact-form";
 
 const ContactPage = () => {
-  const { data, setData, btnClass, form, sendEmail } = useContactForm();
+  const { data, setData, btnBgColor, enabled, form, sendEmail } = useContactForm();
 
   return (
     <section id="contact" className="w-full px-4 py-16 h-full">
@@ -119,8 +119,10 @@ const ContactPage = () => {
                     rows={10}></textarea>
                 </div>
                 <button
+                  disabled={!enabled}
+                  style={{ backgroundColor: btnBgColor, pointerEvents: !enabled ? "none" : "auto" }}
                   id="sendButton"
-                  className={`w-full p-4 mt-4 text-gray-100 uppercase duration-300 shadow-xl shadow-gray-400 rounded-xl ${btnClass}`}>
+                  className={`w-full p-4 mt-4 text-gray-100 uppercase duration-300  rounded-xl hover:shadow-lg hover:shadow-gray-600 cursor-pointer`}>
                   Envoyer
                 </button>
               </form>

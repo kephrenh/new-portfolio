@@ -18,13 +18,11 @@ export function useContactForm() {
   const enabled =
     data.email.length > 0 &&
     data.name.length > 0 &&
-    data.message.length >= 80 &&
+    data.message.length >= 50 &&
     data.phone.length >= 10 &&
     data.subject.length > 0;
 
-  const btnClass = enabled
-    ? "bg-gradient-to-r from-[#5651e5] to-[#709dff] hover:shadow-lg hover:shadow-gray-600 cursor-pointer"
-    : "bg-gray-500";
+  const btnBgColor = enabled ? "#5651e5 " : "#9ca3af";
 
   const form = React.useRef<HTMLFormElement>(null);
 
@@ -47,5 +45,5 @@ export function useContactForm() {
       );
   };
 
-  return { data, setData, btnClass, form, enabled, sendEmail };
+  return { data, setData, btnBgColor, form, enabled, sendEmail };
 }
