@@ -1,13 +1,13 @@
 "use client";
 import Link from "next/link";
-
 import { X } from "lucide-react";
-import { navLinkData } from "@/lib/data/data";
 import SocialIcons from "./social-icons";
 import { kaunshan } from "@/lib/fonts";
 import { Button } from "../ui/button";
+import data from "@/lib/data/data";
 
 const MobileNavbar = ({ isOpen, toggleMenu }: { isOpen: boolean; toggleMenu: () => void }) => {
+  const { menu } = data;
   return (
     <div className={isOpen ? "fixed left-0 top-0 w-full h-screen bg-black/70" : ""}>
       <div
@@ -31,7 +31,7 @@ const MobileNavbar = ({ isOpen, toggleMenu }: { isOpen: boolean; toggleMenu: () 
         </div>
         <div className="flex flex-col py-4">
           <ul className="flex flex-col gap-6">
-            {navLinkData.map(({ text, href }) => {
+            {menu.map(({ text, href }) => {
               return (
                 <li key={"side-link_" + text} onClick={toggleMenu}>
                   <Link className=" hover:text-[#5651e5] transition-all duration-300" href={href}>
