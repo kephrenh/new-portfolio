@@ -5,6 +5,7 @@ import favicon from "./favicon.ico";
 import thumbnail from "@/public/assets/images/portfolio-thumbnail.png";
 import Script from "next/script";
 import { Toaster } from "@/components/ui/toaster";
+import ReactQueryProvider from "@/lib/providers/react-query-provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -89,7 +90,9 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} bg-base antialiased`}>
-        <div className="min-h-screen flex flex-col max-w-7xl mx-auto">{children}</div>
+        <div className="min-h-screen flex flex-col max-w-7xl mx-auto">
+          <ReactQueryProvider>{children}</ReactQueryProvider>
+        </div>
         <Toaster />
       </body>
     </html>
