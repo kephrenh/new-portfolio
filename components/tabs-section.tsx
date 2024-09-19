@@ -34,7 +34,7 @@ const TAB_DATA: tabDataProps[] = [
         <li>HTML / CSS</li>
         <li>SASS</li>
         <li>JavaScript / TypeScript</li>
-        <li>MongoDB / ReactJS / ExpressJS / NodeJS</li>
+        <li>MongoDB / ExpressJS / ReactJS / NodeJS</li>
         <li>NextJS</li>
       </ul>
     ),
