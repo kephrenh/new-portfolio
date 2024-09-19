@@ -15,6 +15,8 @@ export function useContactForm() {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   const enabled =
     data.email.length > 0 &&
     data.name.length > 0 &&
@@ -26,9 +28,11 @@ export function useContactForm() {
 
   const form = React.useRef<HTMLFormElement>(null);
 
+
+
   const sendEmail = (e: FormEvent) => {
     e.preventDefault();
-
+    setLoading(false);
     emailjs
       .sendForm("service_dzulzup", "template_lioodfu", form.current!, {
         publicKey: "bvHkCEc2AKvRxYvhk",
@@ -43,7 +47,8 @@ export function useContactForm() {
           console.log("FAILED...", error.text);
         }
       );
+   
   };
 
-  return { data, setData, btnBgColor, form, enabled, sendEmail };
+  return { data, setData, btnBgColor, form, enabled, sendEmail, loading, };
 }
