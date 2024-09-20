@@ -8,14 +8,18 @@ export function cn(...inputs: ClassValue[]) {
 
 export const parseStringify = (data: any) => JSON.parse(JSON.stringify(data));
 
-export const ensureError = (value: unknown): Error => {
-  if (value instanceof Error) return value;
+export const ensureError = (error: unknown): string => {
+  let message: string;
 
-  let stringified = "[Unable to stringify the thrown value]";
+  if (error instanceof Error) {
+    message = error.message;
+  } else if (error && typeof error === "object" && "message" in error) {
+    message = String(error.message);
+  } else if (typeof error === "string") {
+    message = error;
+  } else {
+    message = "Something went wrong";
+  }
 
-  try {
-    stringified = JSON.stringify(value);
-  } catch {}
-  const error = new Error(`This value was thrown as is, not through an Error: ${stringified}`);
-  return error;
+  return message;
 };
