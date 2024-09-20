@@ -4,8 +4,8 @@ export function useDrawer() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("resize", (e: any) => {
-      if (e.target.innerWidth >= 640) {
+    window.addEventListener("resize", (e: Event) => {
+      if ((e.target as Window).innerWidth >= 640) {
         setIsOpen(false);
       }
     });
