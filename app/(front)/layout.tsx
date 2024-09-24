@@ -9,7 +9,7 @@ export default function FrontLayout({
   return (
     <>
       <FrontHeader />
-      <main className="flex-1 w-full flex justify-center">{children}</main>;
+      <main className="flex-1 w-full flex justify-center">{children}</main>
       <FrontFooter />
     </>
   );
