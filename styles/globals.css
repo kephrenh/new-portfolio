@@ -101,11 +101,11 @@ body {
   }
 
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl;
+    @apply text-3xl sm:text-4xl md:text-5xl;
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl md:text-5xl;
+    @apply text-2xl sm:text-3xl md:text-4xl;
   }
 
   li {
