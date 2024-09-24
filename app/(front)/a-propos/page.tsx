@@ -1,6 +1,6 @@
 import Image from "next/image";
 import aboutImg from "@/public/assets/images/about.jpg";
-import TabsSection from "@/components/tabs-section";
+import { TabsSection } from "@/components/tabs-section";
 
 const AboutPage = () => {
   return (

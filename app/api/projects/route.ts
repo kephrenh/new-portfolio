@@ -1,8 +1,8 @@
-import Work from "@/models/work.model";
+import { Work } from "@/models/work.model";
 
 import { parseStringify } from "@/lib/utils";
 import { NextResponse } from "next/server";
-import dbConnect from "@/lib/mongodb";
+import { dbConnect } from "@/lib/mongodb";
 
 export async function GET() {
   try {

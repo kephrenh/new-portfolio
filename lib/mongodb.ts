@@ -3,7 +3,7 @@ import { getErrorMessage, reportError } from "./utils";
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
-export default async function dbConnect() {
+export const dbConnect = async () => {
   const connectionState = mongoose.connection.readyState;
 
   if (connectionState === 1) {
@@ -25,4 +25,4 @@ export default async function dbConnect() {
   } catch (error) {
     reportError({ message: getErrorMessage(error) });
   }
-}
+};

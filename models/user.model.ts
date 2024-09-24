@@ -11,11 +11,11 @@ const UserSchema = new Schema({
 
 const User = models.User ?? model("User", UserSchema);
 
-export default User;
-
-export type UserType = {
+type UserType = {
   fistName: string;
   lastName: string;
   email: string;
   password: string;
 };
+
+export { User, type UserType };

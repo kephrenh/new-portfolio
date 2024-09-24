@@ -9,6 +9,15 @@ const WorkSchema = new Schema({
   stack: [{ type: String }],
 });
 
-const Work = models.Work ?? model("Work", WorkSchema);
+ const Work = models.Work ?? model("Work", WorkSchema);
 
-export default Work;
+ type WorkType = {
+  title: string;
+  github: {url: string};
+  demo: {url: string};
+  imageSrc: string;
+  description: string
+  stack: string[];
+}
+
+export { Work, type WorkType };

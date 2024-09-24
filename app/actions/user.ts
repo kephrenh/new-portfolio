@@ -1,9 +1,10 @@
 "use server";
 import { dataFormData } from "@/lib/data-formData";
-import dbConnect from "@/lib/mongodb";
+import { dbConnect } from "@/lib/mongodb";
 import { getErrorMessage, reportError } from "@/lib/utils";
-import User from "@/models/user.model";
+import { User } from "@/models/user.model";
 import bcrypt from "bcryptjs";
+import { revalidatePath } from "next/cache";
 
 export const createUser = async (formData: FormData) => {
   try {
@@ -31,6 +32,8 @@ export const createUser = async (formData: FormData) => {
     };
 
     await User.create(userPayload);
+
+    revalidatePath("/");
   } catch (error) {
     reportError({ message: getErrorMessage(error) });
   }

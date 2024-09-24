@@ -5,7 +5,7 @@ type LinkProps = {
   href: string;
 };
 
-const CustomLink = (link: LinkProps) => {
+export const CustomLink = (link: LinkProps) => {
   return <Link href={link.href}>{link.text}</Link>;
 };
-export default CustomLink;
+

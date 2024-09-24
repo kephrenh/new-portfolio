@@ -15,4 +15,15 @@ const ClientSchema = new Schema({
 
 const Client = models.Client ?? model("Client", ClientSchema);
 
-export default Client;
+type ClientType = {
+  name: string;
+  email: string;
+  phone: string;
+  messages: Array<{
+    subject: string;
+    body: string;
+    receivedAt: Date;
+  }>;
+};
+
+export { Client, type ClientType };

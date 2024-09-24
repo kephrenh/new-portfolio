@@ -1,7 +1,6 @@
 "use client";
-import ProjectCard from "@/components/project-card";
-
-import { WorkProps } from "@/lib/types";
+import { ProjectCard } from "@/components/project-card";
+import { WorkType } from "@/models/work.model";
 import { getProjects } from "@/queries";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 
@@ -29,7 +28,7 @@ const ProjectsPage = () => {
 
           {isSuccess && (
             <>
-              {projects.map((project: WorkProps) => (
+              {projects.map((project: WorkType) => (
                 <ProjectCard key={project.title} project={project} />
               ))}
             </>

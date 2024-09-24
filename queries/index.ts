@@ -2,7 +2,7 @@ import { ensureError } from "@/lib/utils";
 
 export const getProjects = async () => {
   try {
-    const res = await fetch("/api/works");
+    const res = await fetch("/api/projects");
     if (!res.ok) {
       throw new Error(`No response from the server: ${res.status}`);
     }

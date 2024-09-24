@@ -1,12 +1,18 @@
 "use client";
 import Link from "next/link";
 import { X } from "lucide-react";
-import SocialIcons from "./social-icons";
+import { SocialIcons } from "./social-icons";
 import { kaunshan } from "@/lib/fonts";
 import { Button } from "../ui/button";
 import data from "@/data/data";
 
-const MobileNavbar = ({ isOpen, toggleMenu }: { isOpen: boolean; toggleMenu: () => void }) => {
+export const MobileNavbar = ({
+  isOpen,
+  toggleMenu,
+}: {
+  isOpen: boolean;
+  toggleMenu: () => void;
+}) => {
   const { menu } = data;
   return (
     <div className={isOpen ? "fixed left-0 top-0 w-full h-screen bg-black/70" : ""}>
@@ -52,4 +58,3 @@ const MobileNavbar = ({ isOpen, toggleMenu }: { isOpen: boolean; toggleMenu: () 
     </div>
   );
 };
-export default MobileNavbar;

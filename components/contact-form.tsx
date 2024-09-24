@@ -20,7 +20,7 @@ import { Textarea } from "./ui/textarea";
 import { sendEmail } from "@/app/actions/email";
 import { contactFormSchema } from "@/lib/zod-schema";
 
-const ContactForm = () => {
+export const ContactForm = () => {
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -165,4 +165,4 @@ const ContactForm = () => {
     </>
   );
 };
-export default ContactForm;
+

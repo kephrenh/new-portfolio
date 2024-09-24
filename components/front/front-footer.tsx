@@ -1,9 +1,9 @@
 import data from "@/data/data";
-import CustomLink from "../custom-link";
+import { CustomLink } from "../custom-link";
 
 const year = new Date().getFullYear();
 
-const FrontFooter = () => {
+export const FrontFooter = () => {
   const { social } = data;
   return (
     <footer className="flex flex-col justify-center sm:flex-row sm:justify-between items-center w-full border-t px-4 py-6">
@@ -22,4 +22,3 @@ const FrontFooter = () => {
     </footer>
   );
 };
-export default FrontFooter;

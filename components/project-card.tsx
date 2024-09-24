@@ -1,9 +1,9 @@
-import { WorkProps } from "@/lib/types";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
-import CustomLink from "./custom-link";
+import { CustomLink } from "./custom-link";
+import { WorkType } from "@/models/work.model";
 
-const ProjectCard = ({ project }: { project: WorkProps }) => {
+export const ProjectCard = ({ project }: { project: WorkType }) => {
   return (
     <article
       key={project.title}
@@ -46,4 +46,3 @@ const ProjectCard = ({ project }: { project: WorkProps }) => {
     </article>
   );
 };
-export default ProjectCard;

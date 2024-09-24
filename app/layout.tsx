@@ -90,7 +90,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} bg-base antialiased`}>
-        <div className="min-h-screen flex flex-col max-w-7xl mx-auto">
+        <div className="min-h-screen w-full mx-auto flex flex-col max-w-7xl justify-center items-center">
           <ReactQueryProvider>{children}</ReactQueryProvider>
         </div>
         <Toaster richColors position="top-right" />

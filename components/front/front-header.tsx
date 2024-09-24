@@ -3,14 +3,14 @@
 import data from "@/data/data";
 import { kaunshan } from "@/lib/fonts";
 import Link from "next/link";
-import CustomLink from "../custom-link";
+import { CustomLink } from "../custom-link";
 import { Button } from "../ui/button";
 import { MenuIcon } from "lucide-react";
 
 import { useDrawer } from "@/hooks/use-drawer";
-import MobileNavbar from "./mobile-navbar";
+import { MobileNavbar } from "./mobile-navbar";
 
-export default function FrontHeader() {
+export const FrontHeader = () => {
   const { isOpen, handleToggleMenu } = useDrawer();
 
   const { menu, login } = data;
@@ -55,4 +55,4 @@ export default function FrontHeader() {
       </nav>
     </header>
   );
-}
+};

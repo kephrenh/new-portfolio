@@ -1,5 +1,5 @@
-import FrontFooter from "@/components/front/front-footer";
-import FrontHeader from "@/components/front/front-header";
+import { FrontFooter } from "@/components/front/front-footer";
+import { FrontHeader } from "@/components/front/front-header";
 
 export default function FrontLayout({
   children,
@@ -9,7 +9,7 @@ export default function FrontLayout({
   return (
     <>
       <FrontHeader />
-      <main className="flex-1 w-full flex justify-center">{children}</main>
+      <main className="flex-1 w-full flex flex-col items-center justify-center">{children}</main>
       <FrontFooter />
     </>
   );

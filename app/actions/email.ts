@@ -1,8 +1,8 @@
 "use server";
 
-import dbConnect from "@/lib/mongodb";
+import { dbConnect } from "@/lib/mongodb";
 import { reportError, getErrorMessage } from "@/lib/utils";
-import Client from "@/models/client.model";
+import { Client } from "@/models/client.model";
 
 import { revalidatePath } from "next/cache";
 import { dataFormData } from "@/lib/data-formData";

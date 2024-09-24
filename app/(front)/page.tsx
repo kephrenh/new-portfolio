@@ -1,4 +1,4 @@
-import SocialIcons from "@/components/front/social-icons";
+import { SocialIcons } from "@/components/front/social-icons";
 import Link from "next/link";
 
 export default function Home() {

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useTransition } from "react";
-import TabButton from "@/components/tab-button";
+import { TabButton } from "@/components/tab-button";
 
 type tabDataProps = { title: string; id: string; content: React.ReactNode };
 
@@ -41,7 +41,7 @@ const TAB_DATA: tabDataProps[] = [
   },
 ];
 
-const TabsSection = () => {
+export const TabsSection = () => {
   const [tab, setTab] = useState("education");
   // eslint-disable-next-line
   const [isPending, startTransition] = useTransition();
@@ -68,5 +68,3 @@ const TabsSection = () => {
     </>
   );
 };
-
-export default TabsSection;

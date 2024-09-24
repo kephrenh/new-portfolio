@@ -6,7 +6,7 @@ const variants = {
   active: { width: "calc(100% - 0.75rem)" },
 };
 
-const TabButton = ({
+export const TabButton = ({
   active,
   selectTab,
   children,
@@ -28,4 +28,4 @@ const TabButton = ({
   );
 };
 
-export default TabButton;
+

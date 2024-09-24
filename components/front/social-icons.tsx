@@ -2,7 +2,7 @@ import { GitHubIcon } from "@/data/icons";
 import { LinkedinIcon, MailIcon, PhoneIcon } from "lucide-react";
 import Link from "next/link";
 
-const SocialIcons = ({ padding }: { padding: string }) => {
+export const SocialIcons = ({ padding }: { padding: string }) => {
   return (
     <>
       <Link href="https://www.linkedin.com/in/mohamed-amoussa-665882212/">
@@ -33,4 +33,4 @@ const SocialIcons = ({ padding }: { padding: string }) => {
   );
 };
 
-export default SocialIcons;
+

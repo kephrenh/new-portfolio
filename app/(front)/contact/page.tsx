@@ -2,8 +2,8 @@
 "use client";
 
 import { AtSign } from "lucide-react";
-import SocialIcons from "@/components/front/social-icons";
-import ContactForm from "@/components/contact-form";
+import {SocialIcons} from "@/components/front/social-icons";
+import {ContactForm} from "@/components/contact-form";
 
 const ContactPage = () => {
   return (
