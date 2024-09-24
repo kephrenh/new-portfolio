@@ -23,3 +23,13 @@ export const ensureError = (error: unknown): string => {
 
   return message;
 };
+
+export function getErrorMessage(error: unknown) {
+  if (error instanceof Error) return error.message;
+  return String(error);
+}
+
+export function reportError({ message }: { message: string }) {
+  console.error(`Error: ${message}`);
+  throw new Error(message);
+}
