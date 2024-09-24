@@ -1,11 +1,12 @@
-import Work from "@/lib/models/work.model";
-import connect from "@/lib/services/mongodb";
+import Work from "@/models/work.model";
+
 import { parseStringify } from "@/lib/utils";
 import { NextResponse } from "next/server";
+import dbConnect from "@/lib/mongodb";
 
 export async function GET() {
   try {
-    await connect();
+    await dbConnect();
     const projects = await Work.find({});
 
     if (!projects) {

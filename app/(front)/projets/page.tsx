@@ -1,10 +1,9 @@
 "use client";
 import ProjectCard from "@/components/project-card";
-import { getProjects } from "@/lib/services/projects.services";
-import { WorkProps } from "@/lib/types";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
 
-// import data from "@/lib/data/data";
+import { WorkProps } from "@/lib/types";
+import { getProjects } from "@/queries";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 
 const ProjectsPage = () => {
   const queryClient = useQueryClient();
