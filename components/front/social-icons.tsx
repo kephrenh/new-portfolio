@@ -1,4 +1,4 @@
-import { GitHubIcon } from "@/lib/data/icons";
+import { GitHubIcon } from "@/data/icons";
 import { LinkedinIcon, MailIcon, PhoneIcon } from "lucide-react";
 import Link from "next/link";
 

@@ -4,7 +4,7 @@ import { X } from "lucide-react";
 import SocialIcons from "./social-icons";
 import { kaunshan } from "@/lib/fonts";
 import { Button } from "../ui/button";
-import data from "@/lib/data/data";
+import data from "@/data/data";
 
 const MobileNavbar = ({ isOpen, toggleMenu }: { isOpen: boolean; toggleMenu: () => void }) => {
   const { menu } = data;

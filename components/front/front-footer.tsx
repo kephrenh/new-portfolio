@@ -1,4 +1,4 @@
-import data from "@/lib/data/data";
+import data from "@/data/data";
 import CustomLink from "../custom-link";
 
 const year = new Date().getFullYear();

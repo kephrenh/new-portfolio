@@ -1,6 +1,6 @@
 "use client";
 
-import data from "@/lib/data/data";
+import data from "@/data/data";
 import { kaunshan } from "@/lib/fonts";
 import Link from "next/link";
 import CustomLink from "../custom-link";

@@ -1,6 +1,7 @@
 import { WorkProps } from "@/lib/types";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
+import CustomLink from "./custom-link";
 
 const ProjectCard = ({ project }: { project: WorkProps }) => {
   return (
@@ -18,7 +19,17 @@ const ProjectCard = ({ project }: { project: WorkProps }) => {
       </div>
       <section className="flex flex-col gap-4 px-4 pb-8 rounded-b-xl">
         <div className="">
-          <h3 className="text-2xl font-bold text-[#222]">{project.title}</h3>
+          <div className="flex gap-4 items-center">
+            <h3 className="text-2xl font-bold text-[#222]">{project.title}</h3>
+            <div className="flex gap-2 items-center">
+              <Badge>
+                <CustomLink href={project.demo.url} text="Demo" />
+              </Badge>
+              <Badge>
+                <CustomLink href={project.github.url} text="GitHub" />
+              </Badge>
+            </div>
+          </div>
           <p className="text-sm text-[#888]">{project.description}</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 rounded-b-lg">
